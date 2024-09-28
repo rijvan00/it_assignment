@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod_base/src/feature/home/view/gallery_view.dart';
 import 'package:flutter_riverpod_base/src/global/views/splash.dart';
-import 'package:flutter_riverpod_base/src/feature/home/view/home.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: SplashView.routePath,
+  initialLocation: SplashScreen.routePath,
   routes: [
     GoRoute(
-      path: SplashView.routePath,
+      path: SplashScreen.routePath,
       builder: (BuildContext context, GoRouterState state) {
-        return const SplashView();
+        return const SplashScreen();
       },
     ),
-
     GoRoute(
-      path: HomeView.routePath,
+      path: GalleryView.routePath,
       builder: (BuildContext context, GoRouterState state) {
-        return const HomeView();
+        return GalleryView();
       },
     ),
   ],
